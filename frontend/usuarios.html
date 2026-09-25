@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Crear usuario</h1>
+
+    <form id="crearUsuarioForm">
+      <label for="name">Nombre completo</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="role_id">Rol</label>
+      <select id="role_id" name="role_id" required>
+        <option value="1">Administrador</option>
+        <option value="2">Coordinador</option>
+        <option value="3">Supervisor</option>
+        <option value="4">Voluntario</option>
+      </select>
+
+      <button type="submit">Crear usuario</button>
+    </form>
+
+    <p id="mensaje" class="mensaje"></p>
+  </div>
+
+  <script src="js/usuarios.js"></script>
+</body>
+</html>

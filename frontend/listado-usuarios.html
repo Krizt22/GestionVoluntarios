@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Usuarios - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estilos mínimos solo para la tabla (no rompen el resto del diseño simple) */
+    .tabla-container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    .filtros label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .filtros select, .filtros button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabla-container">
+    <h1>Listado de usuarios</h1>
+
+    <!-- Sub-tarea 3.7: filtros -->
+    <div class="filtros">
+      <label>Rol:
+        <select id="filtroRol">
+          <option value="">Todos</option>
+          <option value="admin">Administrador</option>
+          <option value="coordinator">Coordinador</option>
+          <option value="supervisor">Supervisor</option>
+          <option value="volunteer">Voluntario</option>
+        </select>
+      </label>
+
+      <label>Estado:
+        <select id="filtroActivo">
+          <option value="">Todos</option>
+          <option value="true">Activos</option>
+          <option value="false">Inactivos</option>
+        </select>
+      </label>
+
+      <button id="btnFiltrar">Filtrar</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Rol</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaUsuarios">
+        <!-- Las filas se generan dinámicamente con JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/listado-usuarios.js"></script>
+</body>
+</html>

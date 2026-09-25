@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión - Gestión de Voluntarios FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Gestión de Voluntarios</h1>
+    <p class="subtitle">Fundación Desarrollo Comunitario</p>
+
+    <form id="loginForm">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="correo@fdc.org" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="********" required>
+
+      <button type="submit">Iniciar sesión</button>
+    </form>
+
+    <!-- Aquí se mostrarán mensajes de éxito o error (sub-tarea 2.5) -->
+    <p id="mensaje" class="mensaje"></p>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
