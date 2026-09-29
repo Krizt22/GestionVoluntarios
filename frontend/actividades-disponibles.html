@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividades disponibles - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .tabla-container { max-width: 800px; margin: 30px auto; background: white; padding: 20px; border: 1px solid #ccc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+  </style>
+</head>
+<body>
+
+  <div class="tabla-container">
+    <h1>Actividades disponibles</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Nombre</th><th>Campaña</th><th>Fecha</th><th>Cupo</th><th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="tablaActividades"></tbody>
+    </table>
+  </div>
+
+  <script src="js/auth-helper.js"></script>
+  <script src="js/solicitar-actividad.js"></script>
+</body>
+</html>

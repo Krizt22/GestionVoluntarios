@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis inscripciones - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .tabla-container { max-width: 700px; margin: 30px auto; background: white; padding: 20px; border: 1px solid #ccc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+  </style>
+</head>
+<body>
+
+  <div class="tabla-container">
+    <h1>Mis inscripciones</h1>
+    <table>
+      <thead>
+        <tr><th>Actividad</th><th>Fecha</th><th>Estado</th></tr>
+      </thead>
+      <tbody id="tablaMisInscripciones"></tbody>
+    </table>
+  </div>
+
+  <script src="js/auth-helper.js"></script>
+  <script src="js/mis-inscripciones.js"></script>
+</body>
+</html>

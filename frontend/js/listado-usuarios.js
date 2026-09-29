@@ -5,6 +5,8 @@ const btnFiltrar = document.getElementById('btnFiltrar');
 
 const API_URL = 'http://localhost:3000/api/usuarios';
 
+requireAuth(); // Sub-tarea 4.2: si no hay token, redirige a login.html
+
 // Sub-tarea 3.7: cargar usuarios aplicando los filtros seleccionados
 async function cargarUsuarios() {
   const params = new URLSearchParams();
@@ -13,7 +15,9 @@ async function cargarUsuarios() {
   if (filtroActivo.value) params.append('active', filtroActivo.value);
 
   try {
-    const response = await fetch(`${API_URL}?${params.toString()}`);
+    const response = await fetch(`${API_URL}?${params.toString()}`, {
+      headers: authHeader()
+    });
     const usuarios = await response.json();
 
     renderizarTabla(usuarios);
@@ -63,7 +67,7 @@ async function editarUsuario(id, nombreActual, correoActual) {
   try {
     const response = await fetch(`${API_URL}/${id}`, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...authHeader() },
       body: JSON.stringify({ name: nuevoNombre, email: nuevoCorreo, role_id: nuevoRol })
     });
 
@@ -85,7 +89,7 @@ async function cambiarEstado(id, estadoActual) {
   try {
     const response = await fetch(`${API_URL}/${id}/estado`, {
       method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...authHeader() },
       body: JSON.stringify({ active: nuevoEstado })
     });
 

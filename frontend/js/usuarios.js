@@ -1,6 +1,8 @@
 const form = document.getElementById('crearUsuarioForm');
 const mensaje = document.getElementById('mensaje');
 
+requireAuth(); // Sub-tarea 4.2: si no hay token, redirige a login.html
+
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
@@ -13,7 +15,8 @@ form.addEventListener('submit', async (event) => {
     const response = await fetch('http://localhost:3000/api/usuarios', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        ...authHeader()
       },
       body: JSON.stringify({ name, email, password, role_id })
     });

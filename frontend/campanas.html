@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campañas - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .tabla-container { max-width: 800px; margin: 30px auto; background: white; padding: 20px; border: 1px solid #ccc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+  </style>
+</head>
+<body>
+
+  <!-- Sub-tarea 6.4: formulario crear campaña -->
+  <div class="login-container">
+    <h1>Crear campaña</h1>
+    <form id="campanaForm">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" required>
+
+      <label for="objective">Objetivo</label>
+      <input type="text" id="objective">
+
+      <label for="description">Descripción</label>
+      <input type="text" id="description">
+
+      <label for="start_date">Fecha inicio</label>
+      <input type="date" id="start_date" required>
+
+      <label for="end_date">Fecha fin</label>
+      <input type="date" id="end_date" required>
+
+      <button type="submit">Crear campaña</button>
+    </form>
+    <p id="mensaje" class="mensaje"></p>
+  </div>
+
+  <!-- Sub-tarea 6.5: listado con estado -->
+  <div class="tabla-container">
+    <h1>Listado de campañas</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Nombre</th><th>Inicio</th><th>Fin</th><th>Estado</th><th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCampanas"></tbody>
+    </table>
+  </div>
+
+  <script src="js/auth-helper.js"></script>
+  <script src="js/campanas.js"></script>
+</body>
+</html>

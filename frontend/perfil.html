@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Mi perfil</h1>
+
+    <!-- Sub-tarea 5.4: vista de solo lectura -->
+    <p><strong>Nombre:</strong> <span id="vNombre"></span></p>
+    <p><strong>Correo:</strong> <span id="vCorreo"></span></p>
+    <p><strong>Rol:</strong> <span id="vRol"></span></p>
+
+    <hr>
+
+    <!-- Sub-tarea 5.3: formulario de edición -->
+    <form id="perfilForm">
+      <label for="phone">Teléfono</label>
+      <input type="text" id="phone" name="phone">
+
+      <label for="skills">Habilidades</label>
+      <input type="text" id="skills" name="skills">
+
+      <label for="interest_areas">Áreas de interés</label>
+      <input type="text" id="interest_areas" name="interest_areas">
+
+      <label for="availability">Disponibilidad</label>
+      <input type="text" id="availability" name="availability">
+
+      <button type="submit">Guardar cambios</button>
+    </form>
+
+    <p id="mensaje" class="mensaje"></p>
+  </div>
+
+  <script src="js/auth-helper.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>
