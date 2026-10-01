@@ -1,6 +1,6 @@
 requireAuth();
 
-const API_URL = 'http://localhost:3000/api/inscripciones/mias';
+const API_URL = `${API_BASE_URL}/api/inscripciones/mias`;
 const tabla = document.getElementById('tablaMisInscripciones');
 
 async function cargarMisInscripciones() {

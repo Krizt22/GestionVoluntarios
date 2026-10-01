@@ -1,6 +1,6 @@
 requireAuth();
 
-const API_URL = 'http://localhost:3000/api/perfil';
+const API_URL = `${API_BASE_URL}/api/perfil`;
 const form = document.getElementById('perfilForm');
 const mensaje = document.getElementById('mensaje');
 

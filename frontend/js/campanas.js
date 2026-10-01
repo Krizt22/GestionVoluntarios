@@ -1,6 +1,6 @@
 requireAuth();
 
-const API_URL = 'http://localhost:3000/api/campanas';
+const API_URL = `${API_BASE_URL}/api/campanas`;
 const form = document.getElementById('campanaForm');
 const mensaje = document.getElementById('mensaje');
 const tabla = document.getElementById('tablaCampanas');

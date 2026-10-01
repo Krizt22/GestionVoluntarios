@@ -3,7 +3,7 @@ const filtroRol = document.getElementById('filtroRol');
 const filtroActivo = document.getElementById('filtroActivo');
 const btnFiltrar = document.getElementById('btnFiltrar');
 
-const API_URL = 'http://localhost:3000/api/usuarios';
+const API_URL = `${API_BASE_URL}/api/usuarios`;
 
 requireAuth(); // Sub-tarea 4.2: si no hay token, redirige a login.html
 

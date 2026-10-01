@@ -1,40 +1,90 @@
+/* ===== Base general (aplica a todas las páginas) ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background: #f2f2f2;
+  color: #222;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+/* ===== Login: se centra solo si el body tiene la clase "login-page" =====
+   Agrega class="login-page" al <body> de login.html para que aplique. */
+body.login-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: #f2f2f2;
+  min-height: 100vh;
+  padding: 16px;
 }
 
 .login-container {
   background: white;
   padding: 20px;
   border: 1px solid #ccc;
-  width: 280px;
+  width: 100%;
+  max-width: 320px;
 }
 
+/* ===== Formularios ===== */
 label {
   display: block;
   margin-top: 10px;
 }
 
-input {
+input, select, textarea {
   width: 100%;
-  padding: 6px;
+  padding: 8px;
   margin-top: 4px;
-  box-sizing: border-box;
+  font-size: 1rem;
 }
 
 button {
   margin-top: 15px;
-  width: 100%;
-  padding: 8px;
+  padding: 10px 16px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .mensaje {
   margin-top: 10px;
   font-weight: bold;
+}
+
+/* ===== Tablas: scroll horizontal propio en pantallas angostas,
+   sin necesitar envolver cada tabla en un <div> ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ===== Ajustes para pantallas de celular ===== */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
 }

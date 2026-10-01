@@ -1,6 +1,6 @@
 requireAuth();
 
-const API_URL = 'http://localhost:3000/api/actividades';
+const API_URL = `${API_BASE_URL}/api/actividades`;
 const form = document.getElementById('actividadForm');
 const mensaje = document.getElementById('mensaje');
 const tabla = document.getElementById('tablaActividades');

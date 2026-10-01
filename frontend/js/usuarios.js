@@ -12,7 +12,7 @@ form.addEventListener('submit', async (event) => {
   const role_id = document.getElementById('role_id').value;
 
   try {
-    const response = await fetch('http://localhost:3000/api/usuarios', {
+    const response = await fetch(`${API_BASE_URL}/api/usuarios`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

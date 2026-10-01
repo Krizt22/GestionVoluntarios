@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis inscripciones - FDC</title>
+  <title>Participantes - FDC</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .tabla-container { max-width: 700px; margin: 30px auto; background: white; padding: 20px; border: 1px solid #ccc; }
@@ -14,17 +14,20 @@
 <body>
 
   <div class="tabla-container">
-    <h1>Mis inscripciones</h1>
+    <h1>Participantes de la actividad</h1>
+
+    <label for="activity_id">ID de actividad:</label>
+    <input type="number" id="activity_id">
+    <button id="btnBuscar">Buscar</button>
+
     <table>
-      <thead>
-        <tr><th>Actividad</th><th>Fecha</th><th>Estado</th></tr>
-      </thead>
-      <tbody id="tablaMisInscripciones"></tbody>
+      <thead><tr><th>Nombre</th><th>Correo</th></tr></thead>
+      <tbody id="tablaParticipantes"></tbody>
     </table>
   </div>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
-  <script src="js/mis-inscripciones.js"></script>
+  <script src="js/participantes.js"></script>
 </body>
 </html>

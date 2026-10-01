@@ -1,7 +1,7 @@
 requireAuth();
 
-const API_ACTIVIDADES = 'http://localhost:3000/api/actividades';
-const API_INSCRIPCIONES = 'http://localhost:3000/api/inscripciones';
+const API_ACTIVIDADES = `${API_BASE_URL}/api/actividades`;
+const API_INSCRIPCIONES = `${API_BASE_URL}/api/inscripciones`;
 const tabla = document.getElementById('tablaActividades');
 
 async function cargarActividades() {
