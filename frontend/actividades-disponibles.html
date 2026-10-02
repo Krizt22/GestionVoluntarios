@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Actividades disponibles - FDC</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .tabla-container { max-width: 800px; margin: 30px auto; background: white; padding: 20px; border: 1px solid #ccc; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
-  </style>
 </head>
 <body>
+  <div id="navbar"></div>
 
-  <div class="tabla-container">
+  <main class="contenedor">
     <h1>Actividades disponibles</h1>
+    <p class="subtitulo">Elige una actividad y solicita participar.</p>
+
     <table>
       <thead>
         <tr>
@@ -23,10 +21,11 @@
       </thead>
       <tbody id="tablaActividades"></tbody>
     </table>
-  </div>
+  </main>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/solicitar-actividad.js"></script>
 </body>
 </html>

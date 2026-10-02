@@ -5,41 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campañas - FDC</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .tabla-container { max-width: 800px; margin: 30px auto; background: white; padding: 20px; border: 1px solid #ccc; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
-  </style>
 </head>
 <body>
+  <div id="navbar"></div>
 
-  <!-- Sub-tarea 6.4: formulario crear campaña -->
-  <div class="login-container">
-    <h1>Crear campaña</h1>
-    <form id="campanaForm">
-      <label for="name">Nombre</label>
-      <input type="text" id="name" required>
+  <main class="contenedor">
+    <h1>Campañas</h1>
 
-      <label for="objective">Objetivo</label>
-      <input type="text" id="objective">
+    <div class="panel">
+      <h2>Crear campaña</h2>
+      <form id="campanaForm">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" required>
 
-      <label for="description">Descripción</label>
-      <input type="text" id="description">
+        <label for="objective">Objetivo</label>
+        <input type="text" id="objective">
 
-      <label for="start_date">Fecha inicio</label>
-      <input type="date" id="start_date" required>
+        <label for="description">Descripción</label>
+        <input type="text" id="description">
 
-      <label for="end_date">Fecha fin</label>
-      <input type="date" id="end_date" required>
+        <label for="start_date">Fecha inicio</label>
+        <input type="date" id="start_date" required>
 
-      <button type="submit">Crear campaña</button>
-    </form>
-    <p id="mensaje" class="mensaje"></p>
-  </div>
+        <label for="end_date">Fecha fin</label>
+        <input type="date" id="end_date" required>
 
-  <!-- Sub-tarea 6.5: listado con estado -->
-  <div class="tabla-container">
-    <h1>Listado de campañas</h1>
+        <button type="submit">Crear campaña</button>
+      </form>
+      <p id="mensaje" class="mensaje"></p>
+    </div>
+
+    <h2>Listado de campañas</h2>
     <table>
       <thead>
         <tr>
@@ -48,10 +44,11 @@
       </thead>
       <tbody id="tablaCampanas"></tbody>
     </table>
-  </div>
+  </main>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/campanas.js"></script>
 </body>
 </html>

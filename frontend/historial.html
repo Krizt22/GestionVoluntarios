@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Historial de Participación</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Historial de Participación - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Mi Historial de Participación</h1>
+  <div id="navbar"></div>
 
-  <div>
-    <label>Campaña (ID):</label>
-    <input type="number" id="filtro-campana" placeholder="Opcional">
+  <main class="contenedor">
+    <h1>Mi Historial de Participación</h1>
 
-    <label>Desde:</label>
-    <input type="date" id="filtro-desde">
+    <div class="panel">
+      <label>Campaña (ID):</label>
+      <input type="number" id="filtro-campana" placeholder="Opcional">
 
-    <label>Hasta:</label>
-    <input type="date" id="filtro-hasta">
+      <label>Desde:</label>
+      <input type="date" id="filtro-desde">
 
-    <button id="btn-filtrar">Filtrar</button>
-  </div>
+      <label>Hasta:</label>
+      <input type="date" id="filtro-hasta">
 
-  <p><strong>Total de horas acumuladas:</strong> <span id="total-horas">-</span></p>
+      <button id="btn-filtrar">Filtrar</button>
 
-  <table border="1" cellpadding="5">
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Campaña</th>
-        <th>Actividad</th>
-        <th>Estado inscripción</th>
-        <th>Asistencia</th>
-        <th>Horas</th>
-      </tr>
-    </thead>
-    <tbody id="tabla-historial"></tbody>
-  </table>
+      <p class="mensaje"><strong>Total de horas acumuladas:</strong> <span id="total-horas">-</span></p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Campaña</th>
+          <th>Actividad</th>
+          <th>Estado inscripción</th>
+          <th>Asistencia</th>
+          <th>Horas</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-historial"></tbody>
+    </table>
+  </main>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/historiall.js"></script>
 </body>
 </html>

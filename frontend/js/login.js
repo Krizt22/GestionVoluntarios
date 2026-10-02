@@ -22,8 +22,16 @@ form.addEventListener('submit', async (event) => {
       mensaje.style.color = 'green';
       mensaje.textContent = `Bienvenido, ${data.user.name} (${data.user.role})`;
 
-      // Guardamos el token para usarlo en futuras solicitudes (sub-tareas siguientes)
+      // Guardamos el token y los datos del usuario (nombre y rol) para que
+      // el resto del sistema (barra de navegación, dashboard) sepa quién
+      // está logueado y qué puede ver, sin tener que pedírselo de nuevo al backend.
       localStorage.setItem('token', data.token);
+      localStorage.setItem('usuario', JSON.stringify(data.user));
+
+      // Redirige al panel principal después de un login exitoso
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 600);
     } else {
       mensaje.style.color = 'red';
       mensaje.textContent = data.message;

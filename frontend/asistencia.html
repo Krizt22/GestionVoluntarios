@@ -6,34 +6,38 @@
   <title>Registrar asistencia - FDC</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    /* Ajustes para pantalla móvil: botones grandes, fáciles de tocar */
-    .login-container { width: 90%; max-width: 350px; }
-    button { font-size: 18px; padding: 12px; }
-    input { font-size: 16px; padding: 10px; }
+    /* Pantalla pensada para celular: botones e inputs más grandes y fáciles de tocar en campo */
+    .panel-movil { max-width: 380px; margin: 0 auto; }
+    .panel-movil button { font-size: 18px; padding: 14px; }
+    .panel-movil input { font-size: 16px; padding: 12px; }
   </style>
 </head>
 <body>
+  <div id="navbar"></div>
 
-  <div class="login-container">
+  <main class="contenedor">
     <h1>Registrar asistencia</h1>
 
-    <label for="registration_id">ID de inscripción</label>
-    <input type="number" id="registration_id">
+    <div class="panel panel-movil">
+      <label for="registration_id">ID de inscripción</label>
+      <input type="number" id="registration_id">
 
-    <button id="btnPresente">Marcar presente (check-in)</button>
-    <button id="btnAusente">Marcar ausente</button>
+      <button id="btnPresente">Marcar presente (check-in)</button>
+      <button id="btnAusente">Marcar ausente</button>
 
-    <hr>
+      <hr>
 
-    <label for="attendance_id">ID de asistencia (para salida)</label>
-    <input type="number" id="attendance_id">
-    <button id="btnCheckout">Registrar salida (check-out)</button>
+      <label for="attendance_id">ID de asistencia (para salida)</label>
+      <input type="number" id="attendance_id">
+      <button id="btnCheckout">Registrar salida (check-out)</button>
 
-    <p id="mensaje" class="mensaje"></p>
-  </div>
+      <p id="mensaje" class="mensaje"></p>
+    </div>
+  </main>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/asistencia.js"></script>
 </body>
 </html>

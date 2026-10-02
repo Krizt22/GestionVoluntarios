@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solicitudes de inscripción - FDC</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .tabla-container { max-width: 900px; margin: 30px auto; background: white; padding: 20px; border: 1px solid #ccc; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
-  </style>
 </head>
 <body>
+  <div id="navbar"></div>
 
-  <div class="tabla-container">
+  <main class="contenedor">
     <h1>Solicitudes de inscripción</h1>
+
     <table>
       <thead>
         <tr>
@@ -23,10 +20,11 @@
       </thead>
       <tbody id="tablaSolicitudes"></tbody>
     </table>
-  </div>
+  </main>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/solicitudes.js"></script>
 </body>
 </html>

@@ -5,41 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Listado de Usuarios - FDC</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    /* Estilos mínimos solo para la tabla (no rompen el resto del diseño simple) */
-    .tabla-container {
-      max-width: 800px;
-      margin: 30px auto;
-      background: white;
-      padding: 20px;
-      border: 1px solid #ccc;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 6px 8px;
-      text-align: left;
-    }
-    .filtros label {
-      display: inline-block;
-      margin-right: 15px;
-    }
-    .filtros select, .filtros button {
-      margin-left: 5px;
-    }
-  </style>
 </head>
 <body>
+  <div id="navbar"></div>
 
-  <div class="tabla-container">
+  <main class="contenedor">
     <h1>Listado de usuarios</h1>
 
-    <!-- Sub-tarea 3.7: filtros -->
-    <div class="filtros">
+    <div class="panel filtros">
       <label>Rol:
         <select id="filtroRol">
           <option value="">Todos</option>
@@ -72,14 +45,13 @@
           <th>Acciones</th>
         </tr>
       </thead>
-      <tbody id="tablaUsuarios">
-        <!-- Las filas se generan dinámicamente con JavaScript -->
-      </tbody>
+      <tbody id="tablaUsuarios"></tbody>
     </table>
-  </div>
+  </main>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/listado-usuarios.js"></script>
 </body>
 </html>

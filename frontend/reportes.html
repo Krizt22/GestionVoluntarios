@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reportes</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes - FDC</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Reportes</h1>
+  <div id="navbar"></div>
 
-  <div>
-    <button id="btn-voluntarios">Voluntarios activos</button>
-    <button id="btn-participacion">Participación / asistencia</button>
-    <button id="btn-horas">Horas por voluntario</button>
-  </div>
+  <main class="contenedor">
+    <h1>Reportes</h1>
 
-  <div>
-    <label>Campaña (ID, opcional):</label>
-    <input type="number" id="filtro-campana">
-    <label>Desde:</label>
-    <input type="date" id="filtro-desde">
-    <label>Hasta:</label>
-    <input type="date" id="filtro-hasta">
-  </div>
+    <div class="panel">
+      <button id="btn-voluntarios">Voluntarios activos</button>
+      <button id="btn-participacion">Participación / asistencia</button>
+      <button id="btn-horas">Horas por voluntario</button>
 
-  <p>
-    <a id="link-csv" href="#" target="_blank">Descargar este reporte en CSV</a>
-  </p>
+      <label>Campaña (ID, opcional):</label>
+      <input type="number" id="filtro-campana">
+      <label>Desde:</label>
+      <input type="date" id="filtro-desde">
+      <label>Hasta:</label>
+      <input type="date" id="filtro-hasta">
 
-  <table border="1" cellpadding="5">
-    <thead id="encabezado-tabla"></thead>
-    <tbody id="cuerpo-tabla"></tbody>
-  </table>
+      <p><a id="link-csv" href="#">Descargar este reporte en CSV</a></p>
+    </div>
+
+    <table>
+      <thead id="encabezado-tabla"></thead>
+      <tbody id="cuerpo-tabla"></tbody>
+    </table>
+  </main>
 
   <script src="js/config.js"></script>
   <script src="js/auth-helper.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/reportess.js"></script>
 </body>
 </html>
